@@ -39,6 +39,7 @@ weekly increase should not be > %10 (business logic).
 These are maintainers and owners of gym establishments and equipment.
 
 \* They are primary stakeholders (among others) to any business value from such a service as this one.
+Meaning their business may be willing or capable to pay for it moreso than any one user.
 
 ### Buddy
 
