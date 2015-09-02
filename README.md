@@ -1,5 +1,11 @@
 # Workit
 
+## Architecture
+
+See [DESIGN.md](DESIGN.md) for any ongoing architecture planning.
+This a meant as a fluid and ever-changing thinking tool that is a bit lighter than UML.
+It is not an established road map.
+
 ## Getting Started
 
 After you have cloned this repo, run this setup script to set up your machine
