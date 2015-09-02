@@ -1,45 +1,53 @@
-Equipment
-	Any standard or IoT (internet of things) equipment or station involved in an exercise.
+### Equipment
 
-	Relationships?
-		has or belongs to an exercise?
+Any standard or IoT (internet of things) equipment or station involved in an exercise.
 
-Workout
-	(is the actual event as it took place which follows a routine)
+- has or belongs to an exercise?
 
-	Tracks workout metrics as they become trackable (and part of a routine or exercise?).
+### Workout
 
-	has :exercises through :routine
+(is the actual event as it took place which follows a routine)
 
-WorkVolume
-	This may(should) be so prevalent that having its own class to encapsulate the behaviour seems warranted.
+Tracks workout metrics as they become trackable (and part of a routine or exercise?).
 
-Routine
-	(is the pre-determined exercises to done in a workout)
+- has :exercises through :routine
 
-	Each returns a total expected work volume,
-	weekly increase should not be > %10 (business logic) to avoid burnout (references not yet provided).
+### WorkVolume
 
-Exercise
-	Each returns a work volume,
-	weekly increase should not be > %10 (business logic).
+This may(should) be so prevalent that having its own class to encapsulate the behaviour seems warranted.
 
-	- muscle groups (+ a coefficient by primary/secondary affected?)
+### Routine
 
-Set
-Rep
+(is the pre-determined exercises to done in a workout)
 
-GymAdmin $$$
-	These are maintainers and owners of gym establishments and equipment.
-	* They are primary stakeholders (among others) to any business value from such a service as this one.
+Each returns a total expected work volume,
+weekly increase should not be > %10 (business logic) to avoid burnout (references not yet provided).
 
-Buddy
-	Tracks related users that may share a workout or routine.
+### Exercise
 
-User
-	Tracks data (improvements) accross all exercises for an individual.
+Each returns a work volume,
+weekly increase should not be > %10 (business logic).
 
-	has many exercises
-	has many routines
-	has many workouts
-	has many work_volumes
+- muscle groups (+ a coefficient by primary/secondary affected?)
+
+### Set
+
+### Rep
+
+### GymAdmin $$$
+
+These are maintainers and owners of gym establishments and equipment.
+\* They are primary stakeholders (among others) to any business value from such a service as this one.
+
+### Buddy
+
+Tracks related users that may share a workout or routine.
+
+### User
+
+Tracks data (improvements) accross all exercises for an individual.
+
+- has many exercises
+- has many routines
+- has many workouts
+- has many work_volumes
