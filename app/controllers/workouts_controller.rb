@@ -17,6 +17,10 @@ class WorkoutsController < ApplicationController
     @workout = Workout.find(params[:id])
   end
 
+  def index
+    @workouts = Workout.paginate(page: params[:page])
+  end
+
   private
 
   def workout_params
