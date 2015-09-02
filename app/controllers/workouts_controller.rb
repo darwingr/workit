@@ -24,6 +24,7 @@ class WorkoutsController < ApplicationController
   private
 
   def workout_params
-    params.require(:workout).permit(:title, :focus, :intensity, :weekday)
+    params.require(:workout)
+      .permit(:title, :focus, :intensity, :weekday)
   end
 end
