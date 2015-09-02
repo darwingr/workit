@@ -1,0 +1,14 @@
+<div class="row">
+  <aside class="col-md-4">
+    <section>
+      <h1>
+        <%= @workout.title %>
+      </h1>
+    </section>
+  </aside>
+  <div class="col-md-8">
+    <% if @workout.weekday? %>
+      <h3>Weekday: <%= @workout.weekday %></h3>
+    <% end %>
+  </div>
+</div>
