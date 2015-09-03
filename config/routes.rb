@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root to: 'workouts#index'
+  devise_for :users
 
   resources :workouts
+
+  root to: 'workouts#index'
 end
