@@ -18,7 +18,7 @@ class WorkoutsController < ApplicationController
   end
 
   def index
-    @workouts = Workout.paginate(page: params[:page])
+    @workouts = Workout.paginate(page: params[:page], per_page: 5)
   end
 
   private

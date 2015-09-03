@@ -1,7 +1,7 @@
 <% provide(:title, 'All workouts') %>
 <h1>All workouts</h1>
 
-<%= will_paginate %>
+<%= will_paginate @workouts %>
 
 <ul class="workouts">
   <% @workouts.each do |workout| %>
@@ -13,4 +13,6 @@
   <% end %>
 </ul>
 
-<%= will_paginate %>
+<%= will_paginate @workouts %>
+
+<%= button_to 'New workout', new_workout_path, method: 'get' %>
