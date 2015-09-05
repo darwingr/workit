@@ -30,7 +30,8 @@ weekly increase should not be > %10 (business logic) to avoid burnout (reference
 
 + name
 + focus ( lower|upper, legs, arms, core...)
-+ 
+
+* behaviour goes here
 
 - has_many :exercises
 - ? belongs_to :workout
