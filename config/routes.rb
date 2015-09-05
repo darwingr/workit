@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :workouts, only: [:index, :show, :new, :create]
+  resources :routines, only: [:index, :show, :new, :create, :edit, :update]
 end
