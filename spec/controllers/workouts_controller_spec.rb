@@ -20,7 +20,7 @@ RSpec.describe WorkoutsController, type: :controller do
 
     context 'without valid attributes' do
       it 'does not create a new workout' do
-        attrs = FactoryGirl.attributes_for :workout, title: nil
+        attrs = FactoryGirl.attributes_for :workout, intensity: nil
         post :create, workout: attrs
         expect(response).to_not redirect_to(assigns(:workout))
       end
