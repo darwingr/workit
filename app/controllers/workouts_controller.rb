@@ -5,7 +5,7 @@ class WorkoutsController < ApplicationController
   end
 
   def create
-    @workout = Workout.create(workout_params)
+    @workout = Workout.new(workout_params)
     if @workout.save
       redirect_to @workout
     else
