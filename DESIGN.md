@@ -11,7 +11,7 @@ Any standard or IoT (internet of things) equipment or station involved in an exe
 
 Tracks workout metrics as they become trackable (and part of a routine or exercise?).
 
-+ start|end
++ started_at|finished_at (unix time for now)
 + date
 + ...biometrics
 

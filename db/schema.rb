@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150903013518) do
+ActiveRecord::Schema.define(version: 20150905024546) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,14 @@ ActiveRecord::Schema.define(version: 20150903013518) do
   end
 
   add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
+
+  create_table "routines", force: :cascade do |t|
+    t.string   "title",                       null: false
+    t.string   "focus",      default: "none", null: false
+    t.text     "details"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "username",               default: "", null: false
@@ -53,12 +61,13 @@ ActiveRecord::Schema.define(version: 20150903013518) do
   add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
   create_table "workouts", force: :cascade do |t|
-    t.string   "title",      null: false
-    t.string   "focus",      null: false
-    t.string   "intensity",  null: false
+    t.string   "intensity",   null: false
     t.string   "weekday"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.datetime "started_at"
+    t.datetime "finished_at"
+    t.text     "workout_log"
   end
 
 end

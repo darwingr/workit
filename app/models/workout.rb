@@ -1,3 +1,3 @@
 class Workout < ActiveRecord::Base
-  validates :title, :intensity, :focus, presence: true
+  validates :intensity, presence: true
 end
