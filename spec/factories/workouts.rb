@@ -6,6 +6,6 @@ FactoryGirl.define do
     started_at '1441314582'
     # Thu, Sep 3, 2015 at 6:17:42 PM EDT (Ottawa)
     finished_at '1441318662'
-    workout_leg 'a little out of breath on those lunges but feel amazing about everything else'
+    workout_log 'a little out of breath on those lunges but feel amazing about everything else'
   end
 end
