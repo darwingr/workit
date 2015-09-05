@@ -1,4 +1,5 @@
-<% provide(:title, 'All workouts') %>
+<p id="notice"><%= notice %></p>
+
 <h1>All workouts</h1>
 
 <%= will_paginate @workouts %>
@@ -14,9 +15,41 @@
 </ul>
 
 <%= will_paginate @workouts %>
-</br>
+
+<br>
+
 <%= button_to 'New workout', new_workout_path, method: :get %>
+
+<br>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @workouts.each do |workout| %>
+      <tr>
+        <td><%= link_to 'Show', workout %></td>
+<%
+=begin %>
+        <td><%= link_to 'Edit', edit_workout_path(workout) %></td>
+        <td><%= link_to 'Destroy', workout, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<%
+=end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
 </br>
+
+<%= link_to 'New Routine', new_routine_path %>
+
+</br>
+
 <% if user_signed_in? %>
   <li><%= link_to current_user.email, edit_user_registration_path %></li>
   <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
