@@ -7,8 +7,7 @@
 <ul class="workouts">
   <% @workouts.each do |workout| %>
     <li>
-      <%= link_to workout.title, workout %>
-      <li>focus: <%= workout.focus %></li>
+      <%= link_to workout.weekday, workout %>
       <li>intensity: <%= workout.intensity %></li>
     </li></br>
   <% end %>
