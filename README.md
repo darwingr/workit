@@ -1,5 +1,7 @@
 # Workit
 
+[![Build Status](https://travis-ci.org/darwingr/workit.svg)](https://travis-ci.org/darwingr/workit)
+
 ## Architecture
 
 See [DESIGN.md](DESIGN.md) for any ongoing architecture planning.
